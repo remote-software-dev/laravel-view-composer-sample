@@ -11,9 +11,4 @@ class ProductController extends Controller
         $products = Product::all();
         return view('products',compact('products'));
     }
-
-    public function displayPartialData($id){
-        $product = Product::findOrFail($id);
-        return view('layouts.partials.header',compact('product'));
-    }
 }
